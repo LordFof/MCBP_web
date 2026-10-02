@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+ <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#ff2d55"/><stop offset=".22" stop-color="#ffcc00"/>
+  <stop offset=".45" stop-color="#34c759"/><stop offset=".68" stop-color="#00c7ff"/>
+  <stop offset=".86" stop-color="#5856d6"/><stop offset="1" stop-color="#ff2d9b"/>
+ </linearGradient>
+ <radialGradient id="bg"><stop stop-color="#27313d"/><stop offset="1" stop-color="#080b10"/></radialGradient>
+</defs>
+<rect x="8" y="8" width="496" height="496" rx="100" fill="url(#bg)" stroke="url(#g)" stroke-width="12"/>
+<path d="M256 70C221 135 130 226 130 318c0 73 56 124 126 124s126-51 126-124c0-92-91-183-126-248z" fill="url(#g)" stroke="#fff" stroke-opacity=".75" stroke-width="5"/>
+<ellipse cx="215" cy="190" rx="30" ry="65" fill="#fff" opacity=".55" transform="rotate(25 215 190)"/>
+<text x="256" y="475" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="900" fill="url(#g)">MCBP</text>
+</svg>

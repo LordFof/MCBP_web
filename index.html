@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MCBP">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="icon" href="icon.svg">
+  <title>MCBP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <button id="menuBtn" class="iconBtn">☰</button>
+    <div class="brand">MCBP</div>
+    <div class="topActions">
+      <button id="debugBtn" class="miniBtn">DEBUG: OFF</button>
+      <button id="searchBtn" class="miniBtn">⌕</button>
+    </div>
+  </header>
+
+  <main id="mainScreen" class="screen">
+    <section id="mainColor" class="colorCard">
+      <div id="mainName">Načítám databázi…</div>
+      <div id="mainRgb">RGB —</div>
+      <div id="mainTol" class="subInfo">R-G — &nbsp; G-B — &nbsp; R-B —</div>
+    </section>
+    <div class="sliders compact">
+      <label>R <input id="mainR" type="range" min="0" max="255" value="0"></label>
+      <label>G <input id="mainG" type="range" min="0" max="255" value="0"></label>
+      <label>B <input id="mainB" type="range" min="0" max="255" value="0"></label>
+    </div>
+    <div class="mainButtons">
+      <button id="labBtn">LABORATOŘ</button>
+      <button id="savedBtn">ULOŽENÉ BARVY</button>
+      <button id="dbBtn">DATABÁZE BAREV</button>
+    </div>
+    <div id="status" class="status">Připravuji…</div>
+    <div class="credit">Created by LordFof</div>
+  </main>
+
+  <main id="labScreen" class="screen hidden">
+    <div class="labTop">
+      <button id="backBtn" class="miniBtn">← ZPĚT</button>
+      <button id="labDebugBtn" class="miniBtn">DEBUG: OFF</button>
+      <button id="labSearchBtn" class="miniBtn">⌕</button>
+    </div>
+    <section id="labColor" class="colorCard">
+      <div id="labName">—</div>
+      <div id="labRgb">RGB —</div>
+      <div id="labTol">R-G — &nbsp; G-B — &nbsp; R-B —</div>
+    </section>
+    <div class="labFields">
+      <label>R <input id="labR" type="number" min="0" max="255"></label>
+      <label>G <input id="labG" type="number" min="0" max="255"></label>
+      <label>B <input id="labB" type="number" min="0" max="255"></label>
+    </div>
+    <div class="sliders">
+      <label>R <input id="labRS" type="range" min="0" max="255"></label>
+      <label>G <input id="labGS" type="range" min="0" max="255"></label>
+      <label>B <input id="labBS" type="range" min="0" max="255"></label>
+      <label>L <input id="labL" type="range" min="0" max="100" step="0.1"></label>
+    </div>
+    <label class="check"><input id="lockL" type="checkbox"> Zámek odstínu</label>
+    <div class="buttonGrid">
+      <button id="holdBtn">PODRŽET</button>
+      <button id="heldBtn" class="held hidden">Podržená barva</button>
+      <button id="releaseBtn">PUSTIT</button>
+    </div>
+    <div class="buttonGrid three">
+      <button id="createGroupBtn">VYTVOŘIT SKUPINU</button>
+      <button id="addGroupBtn">PŘIDAT DO SKUPINY</button>
+      <button id="saveBtn">ULOŽIT</button>
+    </div>
+    <div class="buttonGrid two">
+      <button id="groupsBtn">SKUPINY</button>
+      <button id="nearbyBtn">ODSTÍNY ±5 L</button>
+      <button id="compareBtn">POROVNAT</button>
+      <button id="measureBtn">MĚŘIT</button>
+    </div>
+    <section>
+      <h3>Okolní odstíny</h3>
+      <div id="predictions" class="colorRow"></div>
+    </section>
+    <section>
+      <h3>Historie měření</h3>
+      <div id="history" class="colorRow"></div>
+    </section>
+    <div class="credit">Created by LordFof</div>
+  </main>
+</div>
+
+<div id="overlay" class="overlay hidden"><div id="dialog" class="dialog"></div></div>
+<script src="app.js"></script>
+</body>
+</html>
